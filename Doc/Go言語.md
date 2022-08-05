@@ -47,3 +47,19 @@ VSCodeでコマンドパレット(Ctrl+Shift+P)を開いて以下を実行。拡
 
     go mod init <package名>
 main.goのフォルダで上記コマンドを実行すると、エラーが解消される。
+
+### Go installで失敗する
+[現象]
+Ctrl+Shift+Pで「Go install」コマンドを実施し、全てのツールをインストールしようとすると、以下のエラーが出力される。
+
+~~~
+go: github.com/cweill/gotests/gotests@latest: module github.com/cweill/gotests/gotests: Get "https://proxy.golang.org/github.com/cweill/gotests/gotests/@v/list": dial tcp 142.250.206.241:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+~~~
+
+[原因]
+VSCodeのプロキシ設定がされていなかった。
+
+[解決策]
+Ctrl+,でユーザ設定を開き、Proxy設定に入力する
+
+![](SetProxyOnVSCode.png)
