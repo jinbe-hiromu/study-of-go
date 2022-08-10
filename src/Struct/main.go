@@ -88,4 +88,15 @@ func main() {
 		fmt.Println(*u)
 	}
 
+	// structマップ
+	fmt.Println("---struct map---")
+	m:= map[int]User{
+		1:{Name:"user1", Age:10},
+		2:{Name:"user2", Age:20},	
+	}
+
+	for _,u := range m{
+		fmt.Println(u)
+	}
+
 }
