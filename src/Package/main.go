@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"udemy/src/Package/foo"
+	"main/foo"		// go.modがあるのでモジュールモード。モジュールモードで内部パッケージを参照する場合、モジュール名(main)＋パッケージ名(foo)と記述する
 )
 
 func main() {

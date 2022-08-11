@@ -1,3 +1,3 @@
-module udemy/src/Package
+module main
 
 go 1.18
