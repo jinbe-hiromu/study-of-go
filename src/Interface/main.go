@@ -27,6 +27,11 @@ func (c *Person) ToString() string {
 	return fmt.Sprintf("Name=%v, Age=%v", c.Name, c.Age)
 }
 
+// interface Stringer
+func (p *Person) String() string{
+	return fmt.Sprintf("<<%v,%v>>",p.Name,p.Age)
+}
+
 func main() {
 	stringfy := []Stringfy{
 		&Person{Name: "John", Age: 100},
@@ -36,4 +41,8 @@ func main() {
 	for _, c := range stringfy {
 		fmt.Println(c.ToString())
 	}
+
+	// interface Stringer
+	p := &Person{Name: "John", Age:100}
+	fmt.Println(p)
 }
