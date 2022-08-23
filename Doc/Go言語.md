@@ -63,3 +63,30 @@ VSCodeのプロキシ設定がされていなかった。
 Ctrl+,でユーザ設定を開き、Proxy設定に入力する
 
 ![](SetProxyOnVSCode.png)
+
+### GO installで「go-delve」（デバッグ機能)だけこける
+[現象]
+Ctrl+Shift+Pで「Go install」コマンドを実施し、全てのツールをインストールしようとすると、以下のエラーが出力される。
+
+~~~
+Installing github.com/go-delve/delve/cmd/dlv@latest FAILED
+{
+ "killed": false,
+ "code": 2,
+ "signal": null,
+ "cmd": "/usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest",
+ "stdout": "",
+ "stderr": "github.com/go-delve/delve/pkg/proc/internal/ebpf\n# github.com/go-delve/delve/pkg/proc/internal/ebpf\ncgo: C compiler \"gcc\" not found: exec: \"gcc\": executable file not found in $PATH\n"
+}
+~~~
+
+[原因]
+gccがインストールされていなかったため。
+
+[解決策]
+gccをインストールする
+
+    sudo apt install gcc
+
+
+https://qiita.com/hskm07/items/dc30f65693fbfa9557f0
