@@ -6,6 +6,13 @@ HPからOSに合わせてGoをインストールする
 
 <https://go.dev/dl/>
 
+### Linuxの場合
+https://go.dev/doc/install
+
+1. 公式ページのDownloadボタンからダウンロードする
+2. WSLの/usr/localにファイルを移動させる
+3. 公式通りにコマンドを打つ
+
 ## 開発環境
 
 VSCode
