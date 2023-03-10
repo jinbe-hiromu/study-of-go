@@ -9,9 +9,11 @@ HPからOSに合わせてGoをインストールする
 ### Linuxの場合
 https://go.dev/doc/install
 
-1. 公式ページのDownloadボタンからダウンロードする
-2. WSLの/usr/localにファイルを移動させる
-3. 公式通りにコマンドを打つ
+~~~
+wget https://dl.google.com/go/go1.20.2.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf go1.20.2.linux-amd64.tar.gz
+~~~
 
 ## 開発環境
 
